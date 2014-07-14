@@ -5,11 +5,7 @@ class AmuseParkApp
   end
 
   def index_by_id
-    id_hsh = {}
-    @parks.each do |hsh|
-     id_hsh[hsh[:id]] = hsh
-    end
-    id_hsh
+    Hash[@parks.map { |hsh| [hsh[:id], hsh] } ]
   end
 
   def index_by_country
