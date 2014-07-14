@@ -11,4 +11,8 @@ class AmuseParkApp
     end
     id_hsh
   end
+
+  def index_by_country
+    @parks.group_by { |hsh| hsh[:country]}
+  end
 end
